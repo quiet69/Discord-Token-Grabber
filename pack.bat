@@ -1,0 +1,1 @@
+pyinstaller -F --add-data "config.json;." grabber.py -n "hentai" --clean
